@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --white: #ffffff;
+  --red-hat: "Red Hat Display", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding: 50px 0;
+  font-family: var(--red-hat);
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: var(--pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 400px;
+  max-width: 90%;
+  border-radius: 16px;
+  background-color: var(--white);
+  box-shadow: 1px 3px 22px -10px rgba(0, 0, 0, 1);
+}
+
+.image img {
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+}
+
+.content {
+  padding: 40px;
+}
+
+.text {
+  text-align: center;
+}
+.text h1 {
+  font-weight: 900;
+  color: var(--dark-blue);
+  margin-bottom: 10px;
+}
+.text {
+  font-weight: 500;
+  color: var(--desaturated-blue);
+}
+.plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  padding: 24px;
+  border-radius: 12px;
+  margin: 18px 0 24px;
+}
+.plan a {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--bright-blue);
+  transition: 0.5s ease-in-out;
+}
+.plan a:hover {
+  color: hsl(245, 75%, 52%, 0.7);
+}
+.price {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.price h3 {
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+.price p {
+  font-weight: 500;
+  color: var(--desaturated-blue);
+}
+
+.btn button {
+  width: 100%;
+  font-weight: 900;
+  font-family: var(--red-hat);
+  padding: 14px;
+  border: none;
+}
+
+.btn button:first-child {
+  background-color: var(--bright-blue);
+  color: var(--white);
+  border-radius: 12px;
+  box-shadow: 1px 14px 22px -2px rgba(0, 0, 255, 0.39);
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.btn button:first-child:hover {
+  background-color: hsl(245, 75%, 52%, 0.7);
+}
+
+.btn button:last-child {
+  background-color: transparent;
+  color: var(--desaturated-blue);
+  margin-top: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.btn button:last-child:hover {
+  color: #000;
+}
+
+@media screen and (max-width: 425px) {
+  .content {
+    padding: 28px;
+  }
+  .text h1 {
+    font-size: 20px;
+  }
+  .text p {
+    font-size: 14px;
+  }
+  .plan {
+    padding: 16px;
+  }
+  .price {
+    gap: 8px;
+  }
+  .price h3 {
+    font-size: 16px;
+  }
+  .price p {
+    font-size: 14px;
+  }
+  .price img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .plan a {
+    font-size: 12px;
+  }
+}
